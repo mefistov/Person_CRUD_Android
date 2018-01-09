@@ -29,6 +29,8 @@ private PersonAdapter personAdapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.e("conection", "messege");
+        this.conectToDb();
 
         btnSqlLite = findViewById(R.id.btnsqlite);
         btnDelete  = findViewById(R.id.btnDelete);
@@ -58,6 +60,7 @@ private PersonAdapter personAdapter;
         });
         rv.setAdapter(personAdapter);
 
+
     }
 
 
@@ -75,6 +78,7 @@ private PersonAdapter personAdapter;
         if(cv == null)
             cv = new ContentValues();
         db = sqlLiteDBHelper.getWritableDatabase();
+        Log.e("conection", "messege");
     }
     private boolean isConnectToDB(){ return db !=null;}
 
@@ -91,6 +95,7 @@ private PersonAdapter personAdapter;
                 clearPerson();
                 break;
             case  R.id.btnRead:
+                System.out.println("btn tuped");
                 personAdapter.updateList(read());
                 break;
             case R.id.btnUpdate:

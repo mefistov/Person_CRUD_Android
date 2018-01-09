@@ -5,9 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/**
- * Created by Vlad on 1/6/2018.
- */
+
 
 public class SQLLiteDBHelper extends SQLiteOpenHelper {
     public SQLLiteDBHelper(Context context) {
@@ -16,7 +14,7 @@ public class SQLLiteDBHelper extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db)
     {
-        Log.d("SQLLiteDBHelper", "--- onCreate dataabase ---");
+        Log.e("SQLLiteDBHelper", "--- onCreate dataabase ---");
         db.execSQL("create table mytable ("
                 + "id integer primary key autoincrement,"
                 + "firstname text,"
@@ -26,6 +24,8 @@ public class SQLLiteDBHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
-    {}
+    {
+
+    }
 
 }
