@@ -152,6 +152,8 @@ private ArrayList<Person> read() {
         }
         while (c.moveToNext());
     }
+    //hi git
+    //HI EL GIT
     else
         Log.d("read", "0 rows");
     c.close();
